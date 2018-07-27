@@ -22,7 +22,7 @@ const web3 = new Web3(provider);
 
   const result = await new web3.eth.Contract(JSON.parse(interface))
     .deploy({ data: bytecode, arguments: ['BMW'] })
-    .send({ from: accounts[0], gas: '1000000' });
+    .send({ from: accounts[0], gas: '1500000' });
 
   // const contract = new web3.eth.Contract(JSON.stringify(interface));
   // const transaction = contract.deploy({ data: bytecode, arguments: ['BMW'] });
