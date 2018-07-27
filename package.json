@@ -4,9 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "node scripts/compile.js",
+    "cpa": "node scripts/compileAll.js",
+    "deploy": "node scripts/deploy.js",
+    "build": "tnpm run compile && tnpm run deploy",
+    "test": "mocha tests"
   },
   "keywords": [],
-  "author": "",
+  "author": "zefeng",
+  "dependencies": {
+    "bignumber.js": "^7.0.0",
+    "fs-extra": "^7.0.0",
+    "ganache-cli": "6.1.0",
+    "mocha": "^5.2.0",
+    "solc": "^0.4.0",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "1.0.0-beta.34"  
+  },
+  "engines": {
+    "install-node": "8.9.4"
+  },
   "license": "ISC"
 }
